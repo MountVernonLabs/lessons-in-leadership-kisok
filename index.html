@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lessons in Leadership</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta name="viewport" content="width=1920">
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div class="history"></div>
+    	<div id="background">
+        <img id="background_img" src="img/stills/Boldly-stills/Boldly-still_10.jpg" class="">
+      </div>
+      <div class="background_overlay">
+        <img src="img/BGoverlay.png">
+      </div>
+      <div id="title">
+          <img id="title_img" src="img/title-Boldly.png">
+      </div>
+      <div class="history_channel">
+        <img src="img/full-colour-history-logo-negative.png">
+      </div>
+      <div id="carosel">
+        <div id="carosel_inner">
+          <div>
+            <img id="video-Boldly" src="img/stills/Boldly-stills/Boldly-still_01_play.jpg" class="highlight_video" onclick="playVideo('Boldly');">
+            <br>Act Boldly
+          </div>
+          <div>
+            <img id="video-Change" src="img/stills/Change-stills/Change-still_01.jpg" onclick="playVideo('Change');">
+            <br>Embrace Change
+          </div>
+          <div>
+            <img id="video-Dream" src="img/stills/Dream-stills/Dream-still_01.jpg" onclick="playVideo('Dream');">
+            <br>Dream Big
+          </div>
+          <div>
+            <img id="video-Failure" src="img/stills/Failure-stills/Failure-still_01.jpg" onclick="playVideo('Failure');">
+            <br>Learn from Failure
+          </div>
+          <div>
+            <img id="video-Integrity" src="img/stills/Integrity-stills/Integrity-still_01.jpg" onclick="playVideo('Integrity');">
+            <br>Act Boldly
+          </div>
+          <div>
+            <img id="video-Risks" src="img/stills/Risk-stills/Risks-still_01.jpg" onclick="playVideo('Risks');">
+            <br>Take Risks
+          </div>
+        </div>  
+      </div>
+      <div id="control_left">
+        <img src="img/left_arrow.png" onclick="scrollDiv('l', 420);" class="arrow_left">
+      </div>
+      <div id="control_right">
+        <img src="img/right_arrow.png" onclick="scrollDiv('r', 420);" class="arrow_right">
+      </div>
+      <div id="video_player">
+        <div class="video_close">
+          <img src="img/close_btn.png" onclick="closeVideo();">
+        </div>
+        <video id="video">
+          <source src="" type="video/mp4">
+          <track id="caption" label="English" kind="subtitles" srclang="en" src="" default>
+        </video>
+      </div>
+    </div>
+  </body>
+    <script>
+    document.getElementById('video').onended = function(e) {
+        closeVideo();
+    };
+    </script>  
+</html>
